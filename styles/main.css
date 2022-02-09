@@ -1,0 +1,103 @@
+/*****************************************/
+/* What are the weights of each selector? 
+COLOR    SELECTOR         WEIGHT
+(blue)   h1             : 0 0 1
+(maroon) .top           : 
+(green)  #darth         : 
+(aqua)   h1.top         : 
+(orange) article h1     : 
+(purple) article .top   : 
+(red)    article h1.top : 
+(yellow) h1:first-child :  
+
+*/
+
+:root {
+  --blue: #0652dd;
+  --maroon: #6f1e51;
+  --green: #009432;
+  --aqua: #12cbc4;
+  --orange: #ee5a24;
+  --purple: #5758bb;
+  --red: #ea2027;
+  --yellow: #ffc312;
+  --hotpink: #ff69b4;
+}
+
+body {
+  font-family: "Nunito", sans-serif;
+  color: #333;
+  font-size: 1.25rem;
+  line-height: 1.5;
+}
+
+h1 {
+  font-family: "Mansalva", cursive;
+  font-size: 4em;
+}
+
+blockquote {
+  position: relative;
+}
+
+blockquote::before {
+  content: "\2018\2018";
+  display: inline-block;
+  position: absolute;
+  left: -0.3em;
+  top: -0.19em;
+  font-size: 9em;
+  font-weight: bold;
+  line-height: 1;
+  color: rgba(0, 0, 0, 0.1);
+  letter-spacing: -0.1em;
+}
+
+article {
+  margin: 0 auto;
+  padding: 0 1rem;
+  max-width: 40rem;
+}
+
+h1 {
+  color: var(--blue);
+}
+
+.top {
+  color: var(--maroon);
+}
+
+#title {
+  color: var(--green);
+}
+
+h1.top {
+  color: var(--aqua);
+}
+
+article h1 {
+  color: var(--orange);
+}
+
+article .top {
+  color: var(--purple);
+}
+
+article h1.top {
+  color: var(--red);
+}
+
+h1:first-child {
+  color: var(--yellow);
+}
+
+h1 {
+  color: var(--hotpink) !important;
+}
+
+/* end h1 selectors */
+
+.byline {
+  text-align: right;
+  font-style: italic;
+}
